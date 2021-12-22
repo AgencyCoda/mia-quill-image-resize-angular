@@ -6,7 +6,7 @@ import { Resize } from './modules/Resize';
 import { Toolbar } from './modules/Toolbar';
 
 type KnownModule = DisplaySize | Resize | Toolbar;
-const knownModules: {} = { DisplaySize, Resize, Toolbar };
+const knownModules: any = { DisplaySize, Resize, Toolbar };
 
 // Quill.d.ts from official repository doesn't contain all elements available from the quill instance. The missing properties are defined here:
 export interface IQuillInstance {
@@ -87,13 +87,15 @@ export class ImageResize {
         let self = this;
         this.destroyModules();
 
-        if (this._options.modules)
-            this.modules = this._options.modules;
-            /*this.modules = this._options.modules.map(
+        if (this._options.modules){
+            //this.modules = this._options.modules;
+            let optionsModule: Array<any> = this._options.modules as Array<any>;
+            this.modules = optionsModule.map(
                 function (mclass: string | KnownModule | any): void {
-                    return new (knownModules[<string>mclass] || mclass)(self);
+                    return new (knownModules[mclass] || mclass)(self);
                 }
-            );*/
+            );
+        }
 
         this.modules.forEach(function (module: KnownModule): void {
             module.onCreate();

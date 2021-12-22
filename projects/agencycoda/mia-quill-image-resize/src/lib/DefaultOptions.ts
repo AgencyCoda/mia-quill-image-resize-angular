@@ -13,7 +13,7 @@ export interface IDefaultOptions {
 export const DefaultOptions: IDefaultOptions = {
     modules: [
         'DisplaySize',
-        'Toolbar',
+        //'Toolbar',
         'Resize',
     ],
     overlayStyles: {
