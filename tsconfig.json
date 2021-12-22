@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@agencycoda/mia-quill-image-resize": [
+        "dist/agencycoda/mia-quill-image-resize/agencycoda-mia-quill-image-resize",
+        "dist/agencycoda/mia-quill-image-resize"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
