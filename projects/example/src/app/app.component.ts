@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageResize } from 'projects/agencycoda/mia-quill-image-resize/src/public-api';
+import { IframeResize } from 'projects/agencycoda/mia-quill-iframe-resize/src/public-api';
+
 import Quill from 'quill';
 
 @Component({
@@ -20,10 +22,12 @@ export class AppComponent implements OnInit {
       [{ 'align': [] }],
       ['image', 'link', 'video'],
     ],
-    imageResize: {}
+    imageResize: {},
+    iframeResize: {}
   }
 
   ngOnInit(): void {
     Quill.register('modules/imageResize', ImageResize);
+    Quill.register('modules/iframeResize', IframeResize);
   }
 }
