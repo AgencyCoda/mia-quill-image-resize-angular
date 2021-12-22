@@ -3,6 +3,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@agencycoda/mia-quill-iframe-resize": [
+        "dist/agencycoda/mia-quill-iframe-resize/agencycoda-mia-quill-iframe-resize",
+        "dist/agencycoda/mia-quill-iframe-resize"
+      ],
       "@agencycoda/mia-quill-image-resize": [
         "dist/agencycoda/mia-quill-image-resize/agencycoda-mia-quill-image-resize",
         "dist/agencycoda/mia-quill-image-resize"
